@@ -7,4 +7,5 @@ def home(request):
 
 def detail_book(request, id):
     book = get_object_or_404(Book, id=id)
+    print(book.author)
     return render(request, 'books/detail_book.html', {'detail_book': book})
